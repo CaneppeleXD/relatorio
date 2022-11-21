@@ -1,13 +1,17 @@
 package com.relatorio;
 
+import java.io.IOException;
+
+import net.sf.jasperreports.engine.JRException;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws JRException, IOException
     {
-        System.out.println( "Hello World!" );
+        JasperCore.imprimirRel(args);
     }
 }

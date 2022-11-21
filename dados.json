@@ -1,0 +1,36 @@
+{
+    "dados": [
+        {
+            "mercadoria": "mercadoria",
+            "valorpromo": "valorpromo",
+            "valor": "valorpromo",
+            "valor1": "valor1",
+            "embalagem": "embalagem",
+            "nomeMercadoria": "nomeMercadoria",
+            "observacao": "observacao",
+            "imagem1": "imagem1",
+            "imagem2": "imagem1",
+            "imagem3": "imagem1",
+            "imagem4": "imagem1",
+            "imagem5": "imagem1",
+            "imagem6": "imagem1",
+            "imagem7": "imagem1"
+        },
+        {
+            "mercadoria": "mercadoria",
+            "valorpromo": "valorpromo",
+            "valor": "valorpromo",
+            "valor1": "valor1",
+            "embalagem": "embalagem",
+            "nomeMercadoria": "nomeMercadoria",
+            "observacao": "observacao",
+            "imagem1": "imagem1",
+            "imagem2": "imagem1",
+            "imagem3": "imagem1",
+            "imagem4": "imagem1",
+            "imagem5": "imagem1",
+            "imagem6": "imagem1",
+            "imagem7": "imagem1"
+        }
+    ]
+}
