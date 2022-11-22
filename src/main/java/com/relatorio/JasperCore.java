@@ -39,7 +39,7 @@ public class JasperCore {
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,parametros);
 
         //salva e mostra o relatorio
-        JasperExportManager.exportReportToPdfFile(jasperPrint, "BasicReport.pdf");
+        //JasperExportManager.exportReportToPdfFile(jasperPrint, "BasicReport.pdf");
         JasperViewer.viewReport(jasperPrint);
 
     }    
