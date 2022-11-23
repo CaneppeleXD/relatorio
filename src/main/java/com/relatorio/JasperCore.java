@@ -18,6 +18,10 @@ import net.sf.jasperreports.view.JasperViewer;
 
 public class JasperCore {
     public static void imprimirRel(String[] args) throws JRException, IOException {
+        relCatalogoImagem(args);
+    }
+    
+    public static void relCatalogoImagem(String[] args) throws JRException, IOException {
         //carrega e compila o relatorio
         String path = System.getProperty("user.dir")+"/report/RelatorioDitlanta.jrxml";
         JasperDesign jasperDesign = JRXmlLoader.load(path);
@@ -29,6 +33,7 @@ public class JasperCore {
         try {
             parametros.put("empresa", args[0]);
             parametros.put("usuario", args[1]);
+            parametros.put("imagemEmpresa", args[2]);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -41,6 +46,5 @@ public class JasperCore {
         //salva e mostra o relatorio
         //JasperExportManager.exportReportToPdfFile(jasperPrint, "BasicReport.pdf");
         JasperViewer.viewReport(jasperPrint);
-
-    }    
+    }
 }

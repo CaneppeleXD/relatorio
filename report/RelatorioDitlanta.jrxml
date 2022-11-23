@@ -3,6 +3,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioDitlanta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="8" bottomMargin="8" uuid="dad196ef-f4da-40e8-8c97-c5891f7731b3">
 	<parameter name="usuario" class="java.lang.String"/>
 	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="imagemEmpresa" class="java.lang.String"/>
 	<queryString language="json">
 		<![CDATA[dados]]>
 	</queryString>
@@ -62,6 +63,9 @@
 		<property name="net.sf.jasperreports.json.field.expression" value="imagem7"/>
 		<fieldDescription><![CDATA[imagem7]]></fieldDescription>
 	</field>
+	<variable name="imagemTricon" class="java.lang.String">
+		<initialValueExpression><![CDATA["report/tricon.jpg"]]></initialValueExpression>
+	</variable>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -85,7 +89,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["report/image_2022_09_13T12_37_12_357Z.png"]]></imageExpression>
+				<imageExpression><![CDATA[$P{imagemEmpresa}]]></imageExpression>
 			</image>
 			<textField>
 				<reportElement x="160" y="10" width="220" height="24" uuid="56691783-87d6-4545-bb0e-25750b283298"/>
@@ -110,7 +114,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["report/image022.jpg"]]></imageExpression>
+				<imageExpression><![CDATA[$V{imagemTricon}]]></imageExpression>
 			</image>
 			<textField>
 				<reportElement x="499" y="7" width="51" height="30" uuid="d6fabccc-229f-46b0-bdb9-7ece746631be"/>

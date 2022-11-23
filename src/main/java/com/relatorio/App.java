@@ -12,6 +12,7 @@ public class App
 {
     public static void main( String[] args ) throws JRException, IOException
     {
+        //String[] param = {"ditlanta","tricon","report/ditlanta.jpg"};
         JasperCore.imprimirRel(args);
     }
 }
