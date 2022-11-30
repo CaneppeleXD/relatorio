@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioDitlanta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="8" bottomMargin="8" uuid="dad196ef-f4da-40e8-8c97-c5891f7731b3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="teste"/>
 	<parameter name="usuario" class="java.lang.String"/>
 	<parameter name="empresa" class="java.lang.String"/>
 	<parameter name="imagemEmpresa" class="java.lang.String"/>
@@ -64,6 +65,7 @@
 		<fieldDescription><![CDATA[imagem7]]></fieldDescription>
 	</field>
 	<variable name="imagemTricon" class="java.lang.String">
+		<variableExpression><![CDATA["report/tricon.jpg"]]></variableExpression>
 		<initialValueExpression><![CDATA["report/tricon.jpg"]]></initialValueExpression>
 	</variable>
 	<background>

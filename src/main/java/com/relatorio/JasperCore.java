@@ -2,6 +2,7 @@ package com.relatorio;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +19,13 @@ import net.sf.jasperreports.view.JasperViewer;
 
 public class JasperCore {
     public static void imprimirRel(String[] args) throws JRException, IOException {
-        relCatalogoImagem(args);
+        Loading.mostrarLoading();
+        try {
+            relCatalogoImagem(args);
+        }
+        finally {
+            Loading.esconderLoading();
+        }
     }
     
     public static void relCatalogoImagem(String[] args) throws JRException, IOException {
@@ -42,7 +49,6 @@ public class JasperCore {
         //preenche o relatorio
         jasperReport.setProperty("net.sf.jasperreports.awt.ignore.missing.font", "true");
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,parametros);
-
         //salva e mostra o relatorio
         //JasperExportManager.exportReportToPdfFile(jasperPrint, "BasicReport.pdf");
         JasperViewer.viewReport(jasperPrint);
